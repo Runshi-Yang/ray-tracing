@@ -1,17 +1,192 @@
 {
   "camera": {
     "type": "perspective",
-    "focal_length": 3,
-    "eye": [0,0,5],
-    "up": [0,1,0],
-    "look": [0,0,-1],
+    "focal_length": 1,
+    "eye": [
+      2,
+      2,
+      0
+    ],
+    "up": [
+      0,
+      0,
+      1
+    ],
+    "look": [
+      -1,
+      -1,
+      0.6
+    ],
     "height": 1,
     "width": 1.7777777778
   },
   "materials": [
+    {
+      "name": "Lambertian gray",
+      "ka": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "kd": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "ks": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "km": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "phong_exponent": 20
+    },
+    {
+      "name": "orange plastic",
+      "ka": [
+        1.0,
+        0.7,
+        0.2
+      ],
+      "kd": [
+        1.0,
+        0.7,
+        0.2
+      ],
+      "ks": [
+        0.8,
+        0.8,
+        0.8
+      ],
+      "km": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "phong_exponent": 1000
+    },
+    {
+      "name": "mirror",
+      "ka": [
+        0.2,
+        0.2,
+        0.2
+      ],
+      "kd": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "ks": [
+        0.1,
+        0.1,
+        0.1
+      ],
+      "km": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "phong_exponent": 10000
+    },
+    {
+      "name": "metallic gold",
+      "ka": [
+        0.83137,
+        0.68627,
+        0.215686
+      ],
+      "kd": [
+        0.83137,
+        0.68627,
+        0.215686
+      ],
+      "ks": [
+        0.83137,
+        0.68627,
+        0.215686
+      ],
+      "km": [
+        0.83137,
+        0.68627,
+        0.215686
+      ],
+      "phong_exponent": 2000
+    }
   ],
-  "lights":[
+  "lights": [
+    {
+      "type": "point",
+      "position": [
+        2,
+        0,
+        3
+      ],
+      "color": [
+        0.3,
+        0.6,
+        0.3
+      ]
+    },
+    {
+      "type": "point",
+      "position": [
+        -2,
+        0,
+        3
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.9
+      ]
+    },
+    {
+      "type": "point",
+      "position": [
+        2,
+        0,
+        -3
+      ],
+      "color": [
+        0.3,
+        0.6,
+        0.3
+      ]
+    },
+    {
+      "type": "point",
+      "position": [
+        -2,
+        0,
+        -3
+      ],
+      "color": [
+        0.3,
+        0.3,
+        0.9
+      ]
+    }
   ],
   "objects": [
+    {
+      "type": "soup",
+      "material": "orange plastic",
+      "stl": "bunny.stl"
+    },
+    {
+      "type": "sphere",
+      "material": "mirror",
+      "center": [
+        0,
+        0,
+        -2
+      ],
+      "radius": 5
+    }
   ]
 }
